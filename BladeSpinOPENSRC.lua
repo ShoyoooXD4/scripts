@@ -1,5 +1,5 @@
 local library = loadstring(game.HttpGet(game, "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/0x"))()
-local w1 = library:Window("Premium Auto Farm")
+local w1 = library:Window("Blade Spin")
 
 --// Settings
 getgenv().opautofarm = false
