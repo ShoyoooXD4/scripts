@@ -5,9 +5,10 @@ local w1 = library:Window("Blade Spin")
 getgenv().opautofarm = false
 getgenv().upgradeall = false
 
---// Game Services
-local remoteLocation = game:GetService("ReplicatedStorage").ReplicatedStorageHolders.Events
-local startLocation = game:GetService("ReplicatedStorage").ReplicatedStorageHolders.Remotes
+--// RemoteLocations
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local remoteLocation = replicatedStorage.ReplicatedStorageHolders.Events
+local startLocation = replicatedStorage.ReplicatedStorageHolders.Remotes
 
 local upgrades = {
     "AmountOfBlades",
@@ -32,7 +33,7 @@ w1:Toggle(
                         startLocation.SetInRound:FireServer(true)
                         task.wait()
                         remoteLocation.AddXP:FireServer(100000)
-                        remoteLocation.AddCoins:FireServer(100000)
+                        remoteLocation.AddCoins:FireServer(1e6)
                     end)
                     task.wait()
                 end
@@ -67,7 +68,7 @@ w1:Toggle(
                         end)
                         task.wait(0.1)
                     end
-                    task.wait(0.1)
+                    task.wait()
                 end
             end)
         end
