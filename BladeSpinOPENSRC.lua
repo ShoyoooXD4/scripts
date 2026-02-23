@@ -20,10 +20,7 @@ local upgrades = {
 }
 
 w1:Label("Main Controls")
-w1:Toggle(
-    "Auto Farm XP & Coins",
-    "autofarm",
-    false,
+w1:Toggle("Auto Farm XP & Coins", "autofarmEnabled", false,
     function(toggled)
         getgenv().opautofarm = toggled
         if toggled then
@@ -43,9 +40,7 @@ w1:Toggle(
 )
 
 w1:Toggle(
-    "Auto Upgrade All Stats",
-    "autoupgrade",
-    false,
+    "Auto Upgrade All Stats", "autoupgrade", false,
     function(toggled)
         getgenv().upgradeall = toggled
         if toggled then
