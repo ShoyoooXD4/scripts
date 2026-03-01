@@ -46,7 +46,7 @@ w1:Toggle(
         if toggled then
             task.spawn(function()
                 while getgenv().upgradeall do
-                    for _, upgrade in pairs(upgrades) do 
+                    for _, upgrade in ipairs(upgrades) do 
                         pcall(function()
                             remoteLocation.UpgradeCap:FireServer(upgrade)
                         end)
